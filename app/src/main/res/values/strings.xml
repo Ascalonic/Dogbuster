@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Dogbuster</string>
+    <string name="title_activity_dogs">Dogs Activity Map</string>
+    <string name="title_activity_dogbuster_login">Login</string>
+    <string name="rsc_email">E-Mail</string>
+    <string name="rsc_password">Password</string>
+    <string name="rsc_login">Login</string>
+    <string name="title_activity_dogbuster_home">Dogbuster Home</string>
+    <string name="title_activity_dogbuster_central">Dogbuster Central</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="rsc_minimize">Hide the app and take the SAFE walk</string>
+    <string name="rsc_sel_lat">Selected Latitude</string>
+    <string name="rsc_sel_long">Selected Longitude</string>
+    <string name="rsc_range">Range</string>
+    <string name="rsc_LOW">LOW</string>
+    <string name="rsc_MEDIUM">MEDIUM</string>
+    <string name="rsc_HIGH">HIGH</string>
+    <string name="rsc_submit">Submit</string>
+    <string name="rsc_cancel">Cancel</string>
+    <string name="rsc_fname">First Name</string>
+    <string name="rsc_lname">Last Name</string>
+    <string name="rsc_phone">Phone Number</string>
+    <string name="rsc_cpwd">Confirm Password</string>
+    <string name="rsc_signup">Sign Up</string>
+
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDltfJtnJoyDJGY6nQK2NFNVMJlsSKvp7w</string>
+</resources>

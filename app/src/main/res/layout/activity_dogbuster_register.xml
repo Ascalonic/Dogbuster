@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.appjar.dogbuster.dogbuster.DogbusterRegister">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:layout_width="344dp"
+            android:layout_height="495dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp"
+            android:weightSum="1">
+
+            <EditText
+                android:id="@+id/editFname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/rsc_fname"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editLname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/rsc_lname"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.13"
+                android:ems="10"
+                android:hint="Address"
+                android:inputType="textMultiLine" />
+
+            <EditText
+                android:id="@+id/editPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/rsc_phone"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/rsc_email"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/editPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/rsc_password"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/editCPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/rsc_cpwd"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/textPrivacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='By clicking on "SIGN UP" you agree to our privacy policy (Click on this label to view our Privacy Policy)'
+                android:textColor="#2233ff" />
+
+
+            <Button
+                android:id="@+id/btnSignup"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/rsc_signup"
+                tools:text="@string/rsc_signup" />
+
+            <Button
+                android:id="@+id/btnCancelSignup"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/rsc_cancel"
+                tools:text="@string/rsc_cancel" />
+
+            <ProgressBar
+                android:id="@+id/progressRegister"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
