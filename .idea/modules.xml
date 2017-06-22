@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Dogbuster.iml" filepath="$PROJECT_DIR$/Dogbuster.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dogbusterfinal.iml" filepath="$PROJECT_DIR$/Dogbusterfinal.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
