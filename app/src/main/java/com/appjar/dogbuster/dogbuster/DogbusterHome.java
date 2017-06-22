@@ -15,7 +15,6 @@ import android.widget.Toast;
 
 public class DogbusterHome extends AppCompatActivity {
 
-    private final static int MY_PERMISSION_FINE_LOCATION = 101;
 
 
     @Override
@@ -33,27 +32,7 @@ public class DogbusterHome extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
     }
 
-    private void requestPermission() {
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSION_FINE_LOCATION);
-            }
-        }
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-
-        switch (requestCode) {
-            case MY_PERMISSION_FINE_LOCATION:
-                if (grantResults[0] != PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(getApplicationContext(), "This app requires location permissions to be granted", Toast.LENGTH_LONG).show();
-                    finish();
-                }
-                break;
-        }
-    }
 }

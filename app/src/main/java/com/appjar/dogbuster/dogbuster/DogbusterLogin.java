@@ -1,9 +1,14 @@
 package com.appjar.dogbuster.dogbuster;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -19,6 +24,9 @@ public class DogbusterLogin extends AppCompatActivity{
 
     Button btnLogin; TextView textEmail,textPass;
     TextView labForgotPwd; ProgressBar spinner;
+
+    private final static int MY_PERMISSION_FINE_LOCATION = 101;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,6 +141,33 @@ public class DogbusterLogin extends AppCompatActivity{
 
             }
         });
+
+        requestPermission();
+    }
+
+    private void requestPermission() {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+
+                requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSION_FINE_LOCATION);
+            }
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        Log.d("Resquest Permission","CONN_TEST");
+
+        switch (requestCode) {
+            case MY_PERMISSION_FINE_LOCATION:
+                if (grantResults[0] != PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(getApplicationContext(), "This app requires location permissions to be granted", Toast.LENGTH_LONG).show();
+                    finish();
+                }
+                break;
+        }
     }
 
 }
