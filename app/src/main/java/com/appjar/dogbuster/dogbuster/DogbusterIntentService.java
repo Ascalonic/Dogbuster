@@ -212,7 +212,22 @@ public class DogbusterIntentService extends IntentService  implements LocationLi
         {
             try
             {
-                SI.execute(latitude.toString(),longitude.toString());
+
+                double lat=0.0,longi=0.0;
+
+                GPSTracker gps = new GPSTracker(getApplicationContext());
+                if(gps.canGetLocation()){
+
+                    lat=gps.getLatitude();
+                    longi=gps.getLongitude();
+
+                    //Log.d("Lat" + SellerConsole.shop_lat,"TEST_LOC");
+                    //Log.d("Longi" + SellerConsole.shop_longi,"TEST_LOC");
+
+                }
+
+                SI.execute(Double.toString(lat),Double.toString(longi));
+
                 break;
             }
             catch(Exception ex)
